@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: payment
-          image: hispres.azurecr.io/payment:v1
+          image: 052937454741.dkr.ecr.ap-northeast-2.amazonaws.com/user05-payment:latest
           ports:
             - containerPort: 8080
           env:
