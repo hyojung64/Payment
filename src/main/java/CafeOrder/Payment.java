@@ -29,7 +29,19 @@ public class Payment {
                 e.printStackTrace();
         }
     }
-
+    
+    @PrePersist
+    public void onPrePersist()
+    {
+        try{
+            Thread.currentThread().sleep((long) (400+Math.random()*220));
+        }
+        catch(InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    
     @PostUpdate
     public void onPostUpdate(){
         Refunded refunded = new Refunded();
